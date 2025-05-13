@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+   <form action="">
+  <fieldset>
+<legend> informacion general</legend>
+<label for=""> Nombre:</label>
+<input placeholder="Ej. Mariela" type="text">
+<label for="">Apellidos</label>
+<input placeholder="Ej. Canchola" type="text">
+<label for="">correo electronico</label>
+<input placeholder="hola@gmail.com" type="email">
+<br><br>
+<label for=""> fecha de nacimiento:</label>
+<input type="date">
+<label for="">Edad:</label>
+<input type="number">
+<br><br>
+<label for="">Usuario:</label>
+<input type="text">
+<label for="">Contraseña:</label>
+<input type="password" id="password">
+<input type="checkbox" id="show-pass" onchange="OnCheck(this)">
+<label for="show-pass" id="label-show">Mostrar contraseña</label>
+<script>
+  function OnCheck(e){
+    var inputpassword = document.getElementById("password");
+    var labelshow = document.getElementById("label-show");
+    inputpassword.type=e.checked ? "text" : "password"
+    labelshow.textContent=e.checked ? "ocultar contraseña" : "mostrar contraseña"
+  }
+  </script>
+
+
+  </fieldset>
+  <fieldset>
+    
